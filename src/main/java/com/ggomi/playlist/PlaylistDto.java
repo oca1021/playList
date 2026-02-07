@@ -19,6 +19,24 @@ public class PlaylistDto {
     // 수정일
     private LocalDateTime updatedAt;
 
+    public PlaylistDto(Long id, String genre, String artist) {
+        this.id = id;
+        this.genre = genre;
+        this.artist = artist;
+    }
+    public PlaylistDto() {
+        setGenre("발라드");
+    }
+    public PlaylistDto(int n) {
+        System.out.println("public PlaylistDto(int n)");
+    }
+    private PlaylistDto(String str) {
+        System.out.println("private PlaylistDto(String str)");
+    }
+    public PlaylistDto(int n, int m) {
+        this("내마음대로");
+    }
+
     // Getter & Setter 메서드
     public Long getId() {
         return id;
